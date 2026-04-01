@@ -1,0 +1,39 @@
+﻿@model AdMechSite.Models.Seguidor
+
+@{
+    ViewBag.Title = "Novo Seguidor";
+}
+
+<h2>🔧 Tornar-se Iniciado</h2>
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+    <div>
+        Nome:<br />
+        @Html.EditorFor(model => model.Nome)
+        @Html.ValidationMessageFor(model => model.Nome)
+    </div>
+
+    <div>
+        Grau de Devoção:<br />
+        @Html.EditorFor(model => model.GrauDeDevocao)
+    </div>
+
+    <div>
+        Parte Substituída:<br />
+        @Html.EditorFor(model => model.ParteSubstituida)
+    </div>
+
+    <div>
+        Data de Iniciação:<br />
+        @Html.EditorFor(model => model.DataIniciacao)
+    </div>
+
+    <br />
+
+    <input type="submit" value="Salvar" />
+}
+
+<p>@Html.ActionLink("Voltar", "Index")</p>
