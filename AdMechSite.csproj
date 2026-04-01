@@ -135,6 +135,19 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202604011331202_InitialCreate.cs" />
+    <Compile Include="Migrations\202604011331202_InitialCreate.Designer.cs">
+      <DependentUpon>202604011331202_InitialCreate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202604012215301_AjusteAtual.cs" />
+    <Compile Include="Migrations\202604012215301_AjusteAtual.Designer.cs">
+      <DependentUpon>202604012215301_AjusteAtual.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202604012218011_AjusteAtual1.cs" />
+    <Compile Include="Migrations\202604012218011_AjusteAtual1.Designer.cs">
+      <DependentUpon>202604012218011_AjusteAtual1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\CultMechanicusContext.cs" />
     <Compile Include="Models\Dogma.cs" />
     <Compile Include="Models\Escritura.cs" />
@@ -243,6 +256,17 @@
     <Content Include="Scripts\bootstrap.bundle.js.map" />
     <Content Include="Scripts\jquery-3.7.0.slim.min.map" />
     <Content Include="Scripts\jquery-3.7.0.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\202604011331202_InitialCreate.resx">
+      <DependentUpon>202604011331202_InitialCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202604012215301_AjusteAtual.resx">
+      <DependentUpon>202604012215301_AjusteAtual.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202604012218011_AjusteAtual1.resx">
+      <DependentUpon>202604012218011_AjusteAtual1.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
