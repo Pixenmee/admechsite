@@ -1,0 +1,26 @@
+﻿@model IEnumerable<AdMechSite.Models.Louvor>
+
+<h2>🎶 Louvores ao Deus Máquina</h2>
+
+<p>
+    @Html.ActionLink("➕ Novo Louvor", "Create")
+</p>
+
+<table class="table">
+    <tr>
+        <th>Título</th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.Titulo</td>
+            <td>
+                @Html.ActionLink("Editar", "Edit", new { id = item.Id }) |
+                @Html.ActionLink("Detalhes", "Details", new { id = item.Id }) |
+                @Html.ActionLink("Excluir", "Delete", new { id = item.Id })
+            </td>
+        </tr>
+    }
+</table>

@@ -1,0 +1,13 @@
+﻿@model AdMechSite.Models.Louvor
+
+<h2>❌ Excluir Louvor</h2>
+
+<p>@Model.Titulo</p>
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+    @Html.HiddenFor(model => model.Id)
+
+    <input type="submit" value="Excluir" />
+}

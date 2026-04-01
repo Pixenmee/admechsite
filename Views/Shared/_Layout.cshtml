@@ -1,0 +1,155 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>@ViewBag.Title - Cult Mechanicus</title>
+
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+
+    <style>
+        body {
+            background-color: #0b0b0b;
+            color: #e0e0e0;
+            font-family: Consolas, monospace;
+        }
+
+        /* Navbar estilo AdMech */
+        .navbar {
+            background-color: #111 !important;
+            border-bottom: 2px solid #8b0000;
+        }
+
+        .navbar-brand {
+            color: #ff3333 !important;
+            font-weight: bold;
+        }
+
+        .nav-link {
+            color: #cccccc !important;
+        }
+
+            .nav-link:hover {
+                color: #ff3333 !important;
+            }
+
+        /* Conteúdo */
+        .body-content {
+            padding-top: 20px;
+        }
+
+        h1, h2, h3 {
+            color: #ff3333;
+        }
+
+        /* Cards */
+        .card-mech {
+            background-color: #1a1a1a;
+            border: 1px solid #8b0000;
+            padding: 15px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+        }
+
+        /* Botões */
+        .btn-mech {
+            background-color: #8b0000;
+            color: white;
+            border: none;
+        }
+
+            .btn-mech:hover {
+                background-color: #b30000;
+                color: white;
+            }
+
+        /* Tabelas */
+        table {
+            background-color: #111;
+            color: #ddd;
+        }
+
+        th {
+            background-color: #1a1a1a;
+            color: #ff3333;
+        }
+
+        /* Inputs */
+        input, textarea {
+            background-color: #0b0b0b;
+            color: #fff;
+            border: 1px solid #8b0000;
+        }
+
+        footer {
+            color: #777;
+
+            .card-mech h1 {
+                font-size: 40px;
+                text-align: center;
+                color: #ffffff;
+            }
+
+            .card-mech h2 {
+                text-align: center;
+            }
+
+            .row {
+                margin-bottom: 20px;
+            }
+
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-dark">
+        <div class="container">
+
+            @Html.ActionLink("⚙️ Cult Mechanicus", "Index", "Home", null, new { @class = "navbar-brand" })
+
+            <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target=".navbar-collapse">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse d-sm-inline-flex justify-content-between">
+                <ul class="navbar-nav flex-grow-1">
+
+                    <li>@Html.ActionLink("🏠 Home", "Index", "Home", null, new { @class = "nav-link" })</li>
+
+                    <li>@Html.ActionLink("⚙️ Seguidores", "Index", "Seguidor", null, new { @class = "nav-link" })</li>
+
+                    <li>@Html.ActionLink("⚙️ Dogmas", "Index", "Dogma", null, new { @class = "nav-link" })</li>
+
+                    <li>@Html.ActionLink("📜 Escrituras", "Index", "Escritura", null, new { @class = "nav-link" })</li>
+
+                    <li>@Html.ActionLink("🎶 Louvores", "Index", "Louvor", null, new { @class = "nav-link" })</li>
+
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container body-content">
+
+        @RenderBody()
+
+        <hr />
+
+        <footer>
+            <p>⚙️ @DateTime.Now.Year - Cult Mechanicus | "A carne é falha. O aço é eterno."</p>
+        </footer>
+
+    </div>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+
+</body>
+</html>

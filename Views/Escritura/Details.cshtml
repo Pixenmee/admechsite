@@ -1,0 +1,11 @@
+﻿@model AdMechSite.Models.Escritura
+
+<h2>📜 Detalhes da Escritura</h2>
+
+<p><strong>@Model.Titulo</strong></p>
+<p>@Model.Conteudo</p>
+
+<p>
+    @Html.ActionLink("Editar", "Edit", new { id = Model.Id }) |
+    @Html.ActionLink("Voltar", "Index")
+</p>

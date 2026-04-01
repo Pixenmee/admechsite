@@ -1,0 +1,74 @@
+﻿@{
+    ViewBag.Title = "Dashboard";
+}
+
+<h1>⚙️ Painel do Cult Mechanicus</h1>
+
+<h3>Monitoramento do Sistema Sagrado</h3>
+
+<hr />
+
+<div class="row">
+
+    <div class="col-md-3">
+        <div class="card-mech">
+            <h2>⚙️ Seguidores</h2>
+            <h1>@ViewBag.TotalSeguidores</h1>
+            @Html.ActionLink("Ver", "Index", "Seguidor", null, new { @class = "btn btn-mech" })
+        </div>
+    </div>
+
+    <div class="col-md-3">
+        <div class="card-mech">
+            <h2>⚙️ Dogmas</h2>
+            <h1>@ViewBag.TotalDogmas</h1>
+            @Html.ActionLink("Ver", "Index", "Dogma", null, new { @class = "btn btn-mech" })
+        </div>
+    </div>
+
+    <div class="col-md-3">
+        <div class="card-mech">
+            <h2>📜 Escrituras</h2>
+            <h1>@ViewBag.TotalEscrituras</h1>
+            @Html.ActionLink("Ver", "Index", "Escritura", null, new { @class = "btn btn-mech" })
+        </div>
+    </div>
+
+    <div class="col-md-3">
+        <div class="card-mech">
+            <h2>🎶 Louvores</h2>
+            <h1>@ViewBag.TotalLouvores</h1>
+            @Html.ActionLink("Ver", "Index", "Louvor", null, new { @class = "btn btn-mech" })
+        </div>
+    </div>
+
+</div>
+
+<hr />
+
+<div class="card-mech">
+    <h2>📡 Acesso Rápido</h2>
+
+    @Html.ActionLink("➕ Novo Seguidor", "Create", "Seguidor", null, new { @class = "btn btn-mech" })
+    @Html.ActionLink("➕ Novo Dogma", "Create", "Dogma", null, new { @class = "btn btn-mech" })
+    @Html.ActionLink("➕ Nova Escritura", "Create", "Escritura", null, new { @class = "btn btn-mech" })
+    @Html.ActionLink("➕ Novo Louvor", "Create", "Louvor", null, new { @class = "btn btn-mech" })
+
+</div>
+
+<hr />
+
+<div class="card-mech">
+    <h2>📜 Mensagem do Omnissiah</h2>
+
+    <p>
+        "A carne é falha.<br />
+        O aço é eterno.<br /><br />
+
+        A ignorância é heresia.<br />
+        O conhecimento é salvação.<br /><br />
+
+        Você não evolui por escolha.<br />
+        Você evolui por necessidade."
+    </p>
+</div>

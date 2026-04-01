@@ -1,0 +1,10 @@
+﻿@model AdMechSite.Models.Dogma
+
+<h2>📜 Detalhes do Dogma</h2>
+
+<p><strong>Descrição:</strong> @Model.Descricao</p>
+
+<p>
+    @Html.ActionLink("Editar", "Edit", new { id = Model.Id }) |
+    @Html.ActionLink("Voltar", "Index")
+</p>

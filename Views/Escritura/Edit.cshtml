@@ -1,0 +1,22 @@
+﻿@model AdMechSite.Models.Escritura
+
+<h2>✏️ Editar Escritura</h2>
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+    @Html.HiddenFor(model => model.Id)
+
+    <div>
+        Título:<br />
+        @Html.EditorFor(model => model.Titulo)
+    </div>
+
+    <div>
+        Conteúdo:<br />
+        @Html.TextAreaFor(model => model.Conteudo, 5, 50, null)
+    </div>
+
+    <br />
+    <input type="submit" value="Salvar" />
+}

@@ -1,0 +1,13 @@
+﻿@model AdMechSite.Models.Escritura
+
+<h2>❌ Excluir Escritura</h2>
+
+<p>@Model.Titulo</p>
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+    @Html.HiddenFor(model => model.Id)
+
+    <input type="submit" value="Excluir" />
+}

@@ -1,0 +1,30 @@
+﻿@model IEnumerable<AdMechSite.Models.Dogma>
+
+@{
+    ViewBag.Title = "Dogmas";
+}
+
+<h2>⚙️ Dogmas do Culto</h2>
+
+<p>
+    @Html.ActionLink("➕ Novo Dogma", "Create")
+</p>
+
+<table class="table">
+    <tr>
+        <th>Descrição</th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.Descricao</td>
+            <td>
+                @Html.ActionLink("Editar", "Edit", new { id = item.Id }) |
+                @Html.ActionLink("Detalhes", "Details", new { id = item.Id }) |
+                @Html.ActionLink("Excluir", "Delete", new { id = item.Id })
+            </td>
+        </tr>
+    }
+</table>

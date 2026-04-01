@@ -1,0 +1,19 @@
+﻿@model AdMechSite.Models.Seguidor
+
+@{
+    ViewBag.Title = "Detalhes";
+}
+
+<h2>📜 Detalhes do Seguidor</h2>
+
+<div>
+    <p><strong>Nome:</strong> @Model.Nome</p>
+    <p><strong>Devoção:</strong> @Model.GrauDeDevocao</p>
+    <p><strong>Parte Substituída:</strong> @Model.ParteSubstituida</p>
+    <p><strong>Data:</strong> @Model.DataIniciacao.ToShortDateString()</p>
+</div>
+
+<p>
+    @Html.ActionLink("Editar", "Edit", new { id = Model.Id }) |
+    @Html.ActionLink("Voltar", "Index")
+</p>

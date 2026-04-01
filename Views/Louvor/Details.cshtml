@@ -1,0 +1,11 @@
+﻿@model AdMechSite.Models.Louvor
+
+<h2>🎶 Detalhes do Louvor</h2>
+
+<p><strong>@Model.Titulo</strong></p>
+<p>@Model.Letra</p>
+
+<p>
+    @Html.ActionLink("Editar", "Edit", new { id = Model.Id }) |
+    @Html.ActionLink("Voltar", "Index")
+</p>

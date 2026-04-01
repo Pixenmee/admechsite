@@ -1,0 +1,23 @@
+﻿@model AdMechSite.Models.Seguidor
+
+@{
+    ViewBag.Title = "Excluir";
+}
+
+<h2>⚠️ Remover Seguidor</h2>
+
+<p>Tem certeza que deseja excluir este seguidor?</p>
+
+<div>
+    <p><strong>@Model.Nome</strong></p>
+</div>
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+    @Html.HiddenFor(model => model.Id)
+
+    <input type="submit" value="Excluir" />
+}
+
+<p>@Html.ActionLink("Cancelar", "Index")</p>
