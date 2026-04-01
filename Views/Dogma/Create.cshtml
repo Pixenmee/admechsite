@@ -1,0 +1,18 @@
+﻿@model AdMechSite.Models.Dogma
+
+<h2>➕ Novo Dogma</h2>
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+    <div>
+        Descrição:<br />
+        @Html.EditorFor(model => model.Descricao)
+    </div>
+
+    <br />
+    <input type="submit" value="Salvar" />
+}
+
+<p>@Html.ActionLink("Voltar", "Index")</p>
